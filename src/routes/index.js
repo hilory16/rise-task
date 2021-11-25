@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { createContext } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { theme, GlobalStyles } from 'theme';
+import { GlobalStyles, theme } from 'theme';
+import ThemeContextProvider from 'context/themeContext';
+import { ThemeProvider } from 'styled-components';
 import Landing from 'pages/Landing';
 
 export default function Index() {
   return (
     <BrowserRouter>
-     <GlobalStyles />
-      <Routes>
-        <Route path="/" element={<Landing />} />
-      </Routes>
+      <ThemeProvider theme={theme}>
+        <ThemeContextProvider>
+          <GlobalStyles />
+          <Routes>
+            <Route path="/" element={<Landing />} />
+          </Routes>
+        </ThemeContextProvider>
+      </ThemeProvider>
     </BrowserRouter>
   );
 }

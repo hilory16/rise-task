@@ -18,46 +18,24 @@ const GlobalStyles = createGlobalStyle`
    *::after {
       box-sizing: border-box;
    }
-
-   html {
-      /**
-    * The default font size for browsers is 16px.
-    * We apply a size of 62.5% so that, by default, all math with rems will use
-    * 10px as a base instead of 16px.
-    */
-      font-size: 62.5%;
-   }
-
-   body {
+   html,body {
       margin: 0;
       min-height: 100%;
+      height: 100%;
+      padding: 0;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
-      /* font-family: 'Inter', sans-serif; */
-
-      font-size: 1.6rem;
       font-weight: 400;
-      letter-spacing: -0.03rem;
-      line-height: 2.5rem;
+      font-family: 'DM Sans', sans-serif;
    }
-
-   html,
-   body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      font-family: "Mark OT", sans-serif;
-
-   }
-
    body{
       display: flex;
       flex: 1 0 auto;
       flex-direction: column;
    }
-
    u,
    a {
+      text-decoration:none;
       @supports (text-underline-offset: 0.4rem) {
          text-underline-offset: 0.4rem;
          padding-bottom: 0.1rem;
@@ -66,7 +44,6 @@ const GlobalStyles = createGlobalStyle`
          text-underline-position: under;
       }
    }
-
    .link {
       color: inherit;
       text-decoration: none;
@@ -79,14 +56,20 @@ const GlobalStyles = createGlobalStyle`
    input,select{
       outline:none;
    }
-
-   .biz-details-modal {
-      min-width: 75%;
+   h1,h2,h3,h4,h5,h6{
+      font-family: Tomato Grotesk;
+      font-weight:600;
    }
-   .biz-security-question-modal{
-      max-width:500px;
+   a{
+      font-family: Tomato Grotesk;
+      font-weight:400;
    }
-
+   .wrapper{
+      max-width:1200px;
+      margin:0 auto;
+      padding-right:30px;
+      padding-left:30px;
+   }
    ${override}
 `;
 
