@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import { string } from 'prop-types';
+import { string, oneOfType, elementType } from 'prop-types';
 import ArrowRightIcon from 'assets/icons/arrow-right.svg';
 import { AssetItemWrapper } from './assetItem.style';
-export default function AssetItem({ title, desc, cta, link, returns, risk,icon, bg }) {
+export default function AssetItem({ title, desc, cta, link, returns, risk, icon, bg }) {
   return (
     <AssetItemWrapper bg={bg}>
       <div className="asset-item">
@@ -21,7 +21,7 @@ export default function AssetItem({ title, desc, cta, link, returns, risk,icon, 
         </ul>
         <div>
           <Link to={link} className="anchor-link">
-            <p >{cta}</p>{' '}
+            <p>{cta}</p>{' '}
             <span>
               <img src={ArrowRightIcon} alt="arrow-icon" />
             </span>
@@ -34,5 +34,11 @@ export default function AssetItem({ title, desc, cta, link, returns, risk,icon, 
 
 AssetItem.propTypes = {
   title: string.required,
-  desc: string.required
+  desc: string.required,
+  cta: string.required,
+  link: string.required,
+  returns: string.required,
+  risk: string.required,
+  icon: oneOfType([string, elementType]),
+  bg: string.required
 };

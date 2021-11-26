@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { string } from 'prop-types';
+import { bool, elementType, oneOf, string } from 'prop-types';
 import ArrowRightIcon from 'assets/icons/arrow-right.svg';
 import { FeatureWrapper } from './feature.style';
 
@@ -29,7 +29,8 @@ export default function Features({ title, description, illustration, cta, link, 
 Features.propTypes = {
   title: string.required,
   description: string.required,
-  illustration: string.required,
+  illustration: oneOf([string, elementType]),
   cta: string.required,
-  link: string.required
+  link: string.required,
+  reverse: bool.required
 };

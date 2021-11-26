@@ -1,4 +1,3 @@
-import React, { createContext } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { GlobalStyles, theme } from 'theme';
 import ThemeContextProvider from 'context/themeContext';

@@ -66,7 +66,7 @@ const GlobalStyles = createGlobalStyle`
    }
    ${override}
    .wrapper{
-      max-width:1150px;
+      max-width:1120px;
       margin-right:auto;
       margin-left:auto;
       padding-right:30px;

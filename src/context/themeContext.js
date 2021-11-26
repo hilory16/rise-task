@@ -1,3 +1,4 @@
+import { elementType } from 'prop-types';
 import { createContext } from 'react';
 import { theme } from 'theme';
 
@@ -8,3 +9,7 @@ export default function ThemeContextProvider({ children }) {
 }
 
 export { ThemeContext };
+
+ThemeContextProvider.propTypes = {
+  children: elementType
+};

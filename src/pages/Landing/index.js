@@ -15,7 +15,7 @@ export default function Landing() {
       <Partners />
       <Features />
       <AssetClasses />
-      <Cta/>
+      <Cta />
       <Regulation />
       <Testimonies />
       <Community />

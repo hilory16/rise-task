@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const CommunityWrapper = styled.div`
+export const CommunityWrapper = styled.section`
   display: flex;
   align-items: center;
   & > * {
@@ -21,10 +21,11 @@ export const CommunityWrapper = styled.div`
     line-height: 24px;
     color: ${({ theme }) => theme?.colors?.dark1};
     margin-bottom: 32px;
+    max-width: 478px;
   }
-  .community-image{
-      display:flex;
-      justify-content:flex-end;
-      padding-bottom:80px;
+  .community-image {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 80px;
   }
 `;

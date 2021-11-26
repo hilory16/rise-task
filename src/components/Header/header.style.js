@@ -18,10 +18,13 @@ export const HeaderWrapper = styled.div`
       justify-content: between;
       align-items: center;
       li {
-        padding-right: 26px;
+        margin-right: 26px;
+        img {
+          margin-left: 5px;
+        }
       }
       li:last-child {
-        padding-right: 0;
+        margin-right: 0;
       }
       a {
         text-decoration: none;
@@ -32,6 +35,18 @@ export const HeaderWrapper = styled.div`
       }
       .active {
         font-weight: bold;
+        position: relative;
+        :before {
+          content: '';
+          height: 8px;
+          width: 8px;
+          background: ${({ theme }) => theme.colors.green3};
+          display: block;
+          border-radius: 50%;
+          position: absolute;
+          top: 24px;
+          left: 50%;
+        }
       }
     }
   }

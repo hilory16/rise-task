@@ -1,4 +1,4 @@
-import { string } from 'prop-types';
+import { bool, string } from 'prop-types';
 import { ButtonWrapper } from './button.style';
 export default function Button({ title, secondary }) {
   return (
@@ -9,5 +9,6 @@ export default function Button({ title, secondary }) {
 }
 
 Button.propTypes = {
-  title: string.required
+  title: string.required,
+  secondary: bool.required
 };

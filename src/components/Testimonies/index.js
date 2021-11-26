@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
 import Testimony from 'components/Testimony';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import { TestimoniesWrapper } from './testimonies.style';
 
 export default class CenterMode extends Component {
@@ -13,12 +13,13 @@ export default class CenterMode extends Component {
       slidesToShow: 1,
       slidesToScroll: 1,
       initialSlide: 0,
-      arrows:false,
+      arrows: false,
       autoplay: true,
       speed: 2000,
-      autoplaySpeed: 4000,
-      variableWidth:true,
+      autoplaySpeed: 3500,
+      variableWidth: true,
       centerMode: true,
+      pauseOnHover: false
     };
     return (
       <TestimoniesWrapper>

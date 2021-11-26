@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import AppStore from 'components/AppStore';
-import RiseLogo from 'assets/logos/rise.svg';
 import Header from 'components/Header/index';
 import HeroImage from 'assets/images/hero-phone.png';
 import AppleLogo from 'assets/logos/apple.svg';
@@ -14,7 +13,9 @@ export default function Hero() {
       <HeroContent>
         <div className="text-layout">
           <div className="text">
-            <h1>Dollar investments that help you grow</h1>
+            <h1>
+              Dollar investments that help you <span className="grow">grow</span>
+            </h1>
             <p className="hero-desc">
               We put your money in high quality assets that help you build wealth and achieve your
               financial goals.
