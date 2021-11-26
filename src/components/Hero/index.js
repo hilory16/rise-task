@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import AppStore from 'components/AppStore';
 import Header from 'components/Header/index';
+import FloatingBubble from 'components/FloatingBubble';
 import HeroImage from 'assets/images/hero-phone.png';
 import AppleLogo from 'assets/logos/apple.svg';
 import PlaystoreLogo from 'assets/logos/playstore.svg';
@@ -10,6 +11,7 @@ export default function Hero() {
   return (
     <HeroWrapper className="wrapper">
       <Header />
+      <FloatingBubble/>
       <HeroContent>
         <div className="text-layout">
           <div className="text">
