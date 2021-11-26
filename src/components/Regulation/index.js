@@ -2,7 +2,7 @@ import { RegulationWrapper } from './regulation.style';
 export default function Partners() {
   return (
     <RegulationWrapper>
-      <div className="left-item">
+      <div className="left-item color-gradient">
         <div className="top"></div>
         <div className="bottom"></div>
       </div>
@@ -15,7 +15,7 @@ export default function Partners() {
           relevant jurisdictions
         </p>
       </div>
-      <div className="right-item">
+      <div className="right-item color-gradient">
         <div className="top"></div>
         <div className="bottom"></div>
       </div>

@@ -2,30 +2,26 @@ import { Link } from 'react-router-dom';
 import { string } from 'prop-types';
 import ArrowRightIcon from 'assets/icons/arrow-right.svg';
 import { AssetItemWrapper } from './assetItem.style';
-import StockIcon from 'assets/icons/stocks.png';
-export default function AssetItem({ title, desc }) {
+export default function AssetItem({ title, desc, cta, link, returns, risk,icon, bg }) {
   return (
-    <AssetItemWrapper>
+    <AssetItemWrapper bg={bg}>
       <div className="asset-item">
         <div className="icon-wrapper">
-          <img src={StockIcon} alt="partners-images" />
+          <img src={icon} alt={title} />
         </div>
-        <h4>Stocks</h4>
-        <p className="asset-description">
-          We help you invest and manage your money by investing in our portfolio of 30 high-growth
-          stocks across the US market with our equity portfolio of power stocks.
-        </p>
+        <h4>{title}</h4>
+        <p className="asset-description">{desc}</p>
         <ul className="asset-meta">
           <li>
-            Historical returns: <span>14% per annum</span>
+            Historical returns: <span>{returns}</span>
           </li>
           <li>
-            Risk Level: <span>Medium</span>
+            Risk Level: <span>{risk}</span>
           </li>
         </ul>
         <div>
-          <Link to="">
-            <p className="anchor-link">cta</p>{' '}
+          <Link to={link} className="anchor-link">
+            <p >{cta}</p>{' '}
             <span>
               <img src={ArrowRightIcon} alt="arrow-icon" />
             </span>

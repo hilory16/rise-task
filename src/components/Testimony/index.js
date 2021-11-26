@@ -10,8 +10,8 @@ export default function Partners() {
           rather trust my money in the hands of people like Rise who are skilled and knowledgeable.
         </h6>
         <div className="user">
-          <img src={Person1Img} alt="user-avatar" className="avater" />
-          <p className="name">Jesse</p>
+          <img src={Person1Img} alt="user-avatar" className="user-avatar" />
+          <h5 className="name">Jesse</h5>
         </div>
       </div>
     </TestimonyWrapper>

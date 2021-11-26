@@ -6,7 +6,7 @@ export const fontFamily = css`
   @font-face {
     font-family: Tomato Grotesk;
     src: url(${TomatoMedium});
-    font-weight: 400;
+    font-weight: 500;
   }
   @font-face {
     font-family: Tomato Grotesk;

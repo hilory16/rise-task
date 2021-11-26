@@ -1,13 +1,14 @@
 import { Link } from 'react-router-dom';
 import { uuid } from 'uuidv4';
 import RiseLogo from 'assets/logos/rise-black.svg';
-import ArrowRightIcon from 'assets/icons/arrow-right.svg';
+import ArrowSlantIcon from 'assets/icons/arrow-slant.svg';
 import { FooterWrapper } from './footer.style';
 
 const links = [
   {
     id: uuid(),
-    name: 'Rise',
+    name: '',
+    arrow:false,
     links: [
       {
         id: uuid(),
@@ -44,6 +45,7 @@ const links = [
   {
     id: uuid(),
     name: 'Explore',
+    arrow:true,
     links: [
       {
         id: uuid(),
@@ -60,6 +62,7 @@ const links = [
   {
     id: uuid(),
     name: 'Products',
+    arrow:false,
     links: [
       {
         id: uuid(),
@@ -81,6 +84,7 @@ const links = [
   {
     id: uuid(),
     name: 'Contact Us',
+    arrow:true,
     links: [
       {
         id: uuid(),
@@ -113,14 +117,17 @@ const links = [
 export default function Footer() {
   return (
     <FooterWrapper className="wrapper">
-      {links.map(({ id, name, links }) => (
+      {links.map(({ id, name, links, arrow }) => (
         <div className="footer-links" key={id}>
-          <h4>{name}</h4>
-          {/* <img src={RiseLogo} alt="rise-logo" /> */}
+          {
+            name
+            ?<h4>{name}</h4>
+            :<img src={RiseLogo} alt="rise-logo" className="footer-logo"/>
+          }
           <ul>
             {links.map(({ id, name, link }) => (
               <li key={id}>
-                <Link to={link}>{name}</Link>
+                <Link to={link}>{name} {arrow && <img src={ArrowSlantIcon} alt="link-arrow" className="link-arrow"/>}</Link>
               </li>
             ))}
           </ul>

@@ -2,6 +2,7 @@ import Hero from 'components/Hero';
 import Partners from 'components/Partners';
 import Features from 'containers/Features';
 import AssetClasses from 'components/AssetClasses';
+import Cta from 'components/Cta';
 import Regulation from 'components/Regulation';
 import Testimonies from 'components/Testimonies';
 import Community from 'components/Community';
@@ -14,6 +15,7 @@ export default function Landing() {
       <Partners />
       <Features />
       <AssetClasses />
+      <Cta/>
       <Regulation />
       <Testimonies />
       <Community />

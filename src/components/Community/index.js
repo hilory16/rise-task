@@ -6,14 +6,14 @@ export default function Community() {
     <CommunityWrapper className="wrapper">
       <div>
         <h2>Join The Rise Community</h2>
-        <p>
+        <p className="description">
           If you want to go far, go together. Our Telegram community surrounds you with others who
           can help you along your financial journey with tips, support, advice and learning.
           It&apos;s completely free and open to new and seasoned investors.
         </p>
-        <Button title="Join our Community" action="" />
+        <Button secondary title="Join our Community" action="" />
       </div>
-      <div>
+      <div className="community-image">
         <img src={PeopleImage} alt="community-connecting" />
       </div>
     </CommunityWrapper>

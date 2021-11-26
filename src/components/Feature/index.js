@@ -1,25 +1,26 @@
 import { Link } from 'react-router-dom';
 import { string } from 'prop-types';
 import ArrowRightIcon from 'assets/icons/arrow-right.svg';
-import InvestIllustration from 'assets/illustrations/invest.svg';
 import { FeatureWrapper } from './feature.style';
 
 export default function Features({ title, description, illustration, cta, link, reverse }) {
   return (
-    <FeatureWrapper>
+    <FeatureWrapper reverse={reverse}>
       <div className="text-content">
-        <h2 className="title">{title}</h2>
-        <p className="description">{description}</p>
-        <Link to={link}>
-          <p className="anchor-link">{cta}</p>{' '}
-          <span>
-            <img src={ArrowRightIcon} alt="arrow-icon" />
-          </span>
-        </Link>
+        <div>
+          <h2 className="title">{title}</h2>
+          <p className="description">{description}</p>
+          <Link to={link} className="anchor-link">
+            <p>{cta}</p>{' '}
+            <span>
+              <img src={ArrowRightIcon} alt="arrow-icon" />
+            </span>
+          </Link>
+        </div>
       </div>
 
       <div className="feature-image">
-        <img src={InvestIllustration} alt="invest-illustration" />
+        <img src={illustration} alt="illustration" />
       </div>
     </FeatureWrapper>
   );

@@ -64,13 +64,28 @@ const GlobalStyles = createGlobalStyle`
       font-family: Tomato Grotesk;
       font-weight:400;
    }
+   ${override}
    .wrapper{
-      max-width:1200px;
-      margin:0 auto;
+      max-width:1150px;
+      margin-right:auto;
+      margin-left:auto;
       padding-right:30px;
       padding-left:30px;
    }
-   ${override}
+   .anchor-link{
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: -0.05em;
+      color: ${({ theme }) => theme.colors.primary};
+      display:flex;
+      p{
+          margin-right:16px;
+      }
+   }
+   .appstores {
+      display: flex;
+    }
 `;
 
 export { GlobalStyles };
