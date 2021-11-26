@@ -21,7 +21,7 @@ export const FeatureWrapper = styled.div`
       line-height: 24px;
       color: ${({ theme }) => theme.colors.dark2};
       margin-bottom: 24px;
-      max-width: 450px;
+      max-width: 432px;
     }
   }
   .feature-image {
