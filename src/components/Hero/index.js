@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <HeroWrapper className="wrapper">
       <Header />
-      <FloatingBubble/>
+      <FloatingBubble />
       <HeroContent>
         <div className="text-layout">
           <div className="text">

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const HeaderWrapper = styled.div`
   position: absolute;
-  z-index:50;
+  z-index: 50;
   top: 30px;
   left: 0;
   right: 0;

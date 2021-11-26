@@ -79,8 +79,12 @@ const GlobalStyles = createGlobalStyle`
       letter-spacing: -0.05em;
       color: ${({ theme }) => theme.colors.primary};
       display:flex;
+      transition:all ease .3s;
       p{
           margin-right:16px;
+      }
+      :hover{
+         opacity:.5;
       }
    }
    .appstores {

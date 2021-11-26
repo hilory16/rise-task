@@ -28,10 +28,16 @@ export const FooterWrapper = styled.section`
           font-size: 16px;
           line-height: 24px;
           color: ${({ theme }) => theme?.colors?.dark1};
+          transition: all ease 0.3s;
+          :hover {
+            color: ${({ theme }) => theme?.colors?.primary} !important;
+          }
         }
         .link-arrow {
-          padding-left: 10px;
-          padding-bottom: 2px;
+          margin-left: 10px;
+        }
+        :hover .link-arrow {
+          fill: ${({ theme }) => theme?.colors?.primary};
         }
       }
     }
