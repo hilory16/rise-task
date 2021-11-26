@@ -12,7 +12,7 @@ export default class CenterMode extends Component {
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
-      initialSlide: 0,
+      // initialSlide: 0,
       arrows: false,
       autoplay: true,
       speed: 2000,

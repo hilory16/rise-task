@@ -28,4 +28,42 @@ export const CommunityWrapper = styled.section`
     justify-content: flex-end;
     padding-bottom: 80px;
   }
+  ${({ theme }) => theme.mediaQueries.tablet} {
+    justify-content: space-between;
+    padding-bottom: 80px;
+    & > * {
+      width: 48%;
+      flex: initial;
+    }
+    .community-image {
+      padding-bottom: 0;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  ${({ theme }) => theme.mediaQueries.medium} {
+    flex-wrap: wrap;
+    align-items: intial;
+    padding-bottom: 60px;
+    flex-direction: column-reverse;
+    .text-content {
+      text-align: center;
+      h2 {
+        font-size: 30px;
+      }
+    }
+    & > * {
+      width: 100%;
+      flex: initial;
+    }
+    .community-image {
+      justify-content: initial;
+      padding-bottom: 0;
+      margin-bottom: 50px;
+      img {
+        width: 100%;
+      }
+    }
+  }
 `;

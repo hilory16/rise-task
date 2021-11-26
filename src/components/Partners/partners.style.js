@@ -4,7 +4,7 @@ export const PartnersWrapper = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0px 0 50px 0;
+  padding-bottom:50px;
   width: 60%;
   img {
     filter: grayscale(100%) sepia(15%) hue-rotate(185deg) saturate(4.5);
@@ -28,5 +28,29 @@ export const PartnersWrapper = styled.section`
   }
   .techstars-logo {
     height: 70px;
+  }
+  ${({ theme }) => theme.mediaQueries.medium}{
+    padding-bottom:50px;
+    padding-top:50px;
+    width: 100%;
+    justify-content;space-between;
+    img{
+      width:22%;
+      height: auto !important;
+      margin-right: 0;
+      object-fit:contain;
+    }
+    .arm-logo {
+      width:18%;
+    }
+    .wu-logo {
+      width:42%;
+    }
+    .venture-images {
+      width:12%;
+    }
+    .techstars-logo {
+      width:22%;
+    }
   }
 `;

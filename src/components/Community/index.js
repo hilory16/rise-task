@@ -4,7 +4,7 @@ import Button from 'components/Button/index';
 export default function Community() {
   return (
     <CommunityWrapper className="wrapper">
-      <div>
+      <div className="text-content">
         <h2>Join The Rise Community</h2>
         <p className="description">
           If you want to go far, go together. Our Telegram community surrounds you with others who

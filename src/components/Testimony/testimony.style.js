@@ -39,4 +39,10 @@ export const TestimonyWrapper = styled.div`
       margin-right: 16px;
     }
   }
+  ${({ theme }) => theme.mediaQueries.tablet} {
+    width: 46vw;
+  }
+  ${({ theme }) => theme.mediaQueries.medium} {
+    width: 100vw;
+  }
 `;

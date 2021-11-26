@@ -91,6 +91,15 @@ const GlobalStyles = createGlobalStyle`
          max-width:991px;
       }
     }
+    ${({ theme }) => theme.mediaQueries.medium}{
+       .description, .text-content{
+          max-width:100% !important;
+       }
+      .wrapper{
+         padding-right:15px;
+         padding-left:15px;
+      }
+    }
 `;
 
 export { GlobalStyles };

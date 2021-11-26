@@ -10,7 +10,7 @@ export default function Cta() {
           <img src={BuildWealthImage} alt="rise-mobile-app" />
         </div>
         <div className="text-content cta-item">
-          <div>
+          <div style={{ width: '100%' }}>
             <h4>The Rise App</h4>
             <h2>
               Save for your <span>future</span>

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const AssetsWrapper = styled.section`
-  padding: 45px 0 120px 0;
+  padding: 45px inherit 120px inherit;
   h2 {
     font-weight: 600;
     font-size: 40px;
@@ -22,5 +22,16 @@ export const AssetsWrapper = styled.section`
   .assets-collection {
     display: flex;
     justify-content: space-between;
+  }
+  ${({ theme }) => theme.mediaQueries.medium} {
+    .assets-collection {
+      flex-wrap: wrap;
+    }
+    .description {
+      margin-bottom: 30px;
+    }
+  }
+  h2 {
+    font-size: 32px;
   }
 `;

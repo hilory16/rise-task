@@ -7,7 +7,7 @@ export default function Features({ title, description, illustration, cta, link, 
   return (
     <FeatureWrapper reverse={reverse}>
       <div className="text-content">
-        <div>
+        <div style={{ width: '100%' }}>
           <h2 className="title">{title}</h2>
           <p className="description">{description}</p>
           <Link to={link} className="anchor-link">

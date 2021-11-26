@@ -16,4 +16,8 @@ export const ButtonWrapper = styled.div`
     font-weight: bold;
     font-size: 16px;
   }
+  ${({ theme }) => theme.mediaQueries.medium} {
+    margin-right: auto;
+    margin-left: auto;
+  }
 `;

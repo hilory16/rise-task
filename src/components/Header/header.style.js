@@ -6,6 +6,11 @@ export const HeaderWrapper = styled.div`
   left: 0;
   right: 0;
   width: 100%;
+  .logo-container {
+    .menu-icon {
+      display: none;
+    }
+  }
   .header-content {
     display: flex;
     justify-content: space-between;
@@ -48,6 +53,43 @@ export const HeaderWrapper = styled.div`
           left: 50%;
         }
       }
+    }
+  }
+  ${({ theme }) => theme.mediaQueries.medium} {
+    .header-links {
+      position: absolute;
+      top: 70px;
+      left: 0;
+      padding-right: 20px;
+      padding-left: 20px;
+      width: 100%;
+      z-index: 100;
+      background: ${({ theme }) => theme.colors.white};
+      transition: all ease 0.3s;
+      height: ${({ isOpen }) => (isOpen ? 'calc(100vh - 70px)' : '0')};
+      overflow: hidden;
+      ul {
+        display: block;
+        li {
+          margin-bottom: 30px;
+          a {
+            font-size: 20px;
+            line-height: 19px;
+          }
+        }
+      }
+    }
+    .logo-container {
+      a {
+        padding-bottom: 0;
+      }
+      .menu-icon {
+        display: block;
+      }
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
   }
 `;

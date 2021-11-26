@@ -26,4 +26,25 @@ export const TestimoniesWrapper = styled.section`
   }
   .testimonies {
   }
+  ${({ theme }) => theme.mediaQueries.tablet} {
+    padding-bottom: 80px;
+  }
+  ${({ theme }) => theme.mediaQueries.medium} {
+    .slick-list {
+      height: 315px;
+    }
+    .text-content {
+      padding: 0 20px;
+      h2 {
+        font-size: 32px;
+        margin-bottom: 10px;
+      }
+      .testimony-desc {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 23px;
+        margin-bottom: 10px;
+      }
+    }
+  }
 `;

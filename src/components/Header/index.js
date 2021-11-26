@@ -1,10 +1,13 @@
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { uuid } from '../../../node_modules/uuidv4/build/lib/uuidv4';
 import { HeaderWrapper } from './header.style';
 import ArrowDown from 'assets/icons/arrow-down.svg';
 import RiseLogo from 'assets/logos/rise.svg';
+import MenuIcon from 'assets/icons/menu.svg';
 
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
   const links = [
     {
       id: uuid(),
@@ -39,12 +42,18 @@ export default function Header() {
     }
   ];
   return (
-    <HeaderWrapper className="wrapper">
+    <HeaderWrapper className="wrapper" isOpen={isOpen}>
       <section className="header-content">
         <div className="logo-container">
           <NavLink to="">
             <img src={RiseLogo} alt="rise-logo" />
           </NavLink>
+          <img
+            src={MenuIcon}
+            alt="menu-icon"
+            className="menu-icon"
+            onClick={() => setIsOpen(!isOpen)}
+          />
         </div>
         <nav className="header-links">
           <ul>

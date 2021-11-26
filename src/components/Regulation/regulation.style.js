@@ -7,7 +7,6 @@ export const RegulationWrapper = styled.section`
   margin-bottom: 100px;
   padding: 120px 0;
   background: ${({ theme }) => theme?.colors?.white};
-  // background
   .color-gradient {
     position: absolute;
     top: 0;
@@ -64,6 +63,23 @@ export const RegulationWrapper = styled.section`
       color: ${({ theme }) => theme?.colors?.dark2};
       max-width: 504px;
       margin: 0 auto;
+    }
+  }
+  ${({ theme }) => theme.mediaQueries.medium} {
+    padding: 50px 0;
+    margin-bottom: 60px;
+    .text-content {
+      width: 90%;
+      h2 {
+        font-size: 32px;
+        line-height: 120%;
+        text-align: center;
+      }
+      .description {
+        font-weight: 400;
+        text-align: center;
+        margin: 0 auto;
+      }
     }
   }
 `;

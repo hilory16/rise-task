@@ -74,4 +74,20 @@ export const AssetItemWrapper = styled.div`
     bottom: 33px;
     width: 100%;
   }
+  ${({ theme }) => theme.mediaQueries.semiLarge} {
+    width: 32%;
+    .anchor-link {
+      font-size: 15px;
+      p {
+        margin-right: 10px;
+      }
+    }
+    .asset-item {
+      padding: 0 4px 33px 4px;
+    }
+  }
+  ${({ theme }) => theme.mediaQueries.medium} {
+    width: 100%;
+    margin-bottom: 30px;
+  }
 `;

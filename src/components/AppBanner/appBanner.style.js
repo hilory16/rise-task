@@ -52,4 +52,43 @@ export const AppBannerWrapper = styled.section`
       margin-bottom: 32px;
     }
   }
+  ${({ theme }) => theme.mediaQueries.medium} {
+    padding: 40px 20px 57px 20px;
+    padding-bottom: 230px;
+    .text-content {
+      width: 100%;
+    }
+    &::before {
+      height: 100%;
+      width: 70%;
+      object-fit: contain;
+      right: 50%;
+      transform: translateX(50%);
+      top: 70%;
+      background-size: contain;
+    }
+    .text-content {
+      text-align: center;
+      h2 {
+        font-size: 32px;
+        margin-bottom: 16px;
+      }
+      .sub-heading {
+        margin-bottom: 16px;
+      }
+      .section-description {
+        font-weight: 400;
+        font-size: 16px;
+        margin-bottom: 32px;
+      }
+    }
+    .appstores {
+      justify-content: center;
+    }
+  }
+  ${({ theme }) => theme.mediaQueries.small} {
+    &::before {
+      width: 90%;
+    }
+  }
 `;

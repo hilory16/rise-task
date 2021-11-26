@@ -9,6 +9,7 @@ const links = [
     id: uuid(),
     name: '',
     arrow: false,
+    styleClass: 'rise',
     links: [
       {
         id: uuid(),
@@ -46,6 +47,7 @@ const links = [
     id: uuid(),
     name: 'Explore',
     arrow: true,
+    styleClass: 'explore',
     links: [
       {
         id: uuid(),
@@ -63,6 +65,7 @@ const links = [
     id: uuid(),
     name: 'Products',
     arrow: false,
+    styleClass: 'products',
     links: [
       {
         id: uuid(),
@@ -85,6 +88,7 @@ const links = [
     id: uuid(),
     name: 'Contact Us',
     arrow: true,
+    styleClass: 'contact',
     links: [
       {
         id: uuid(),
@@ -117,8 +121,8 @@ const links = [
 export default function Footer() {
   return (
     <FooterWrapper className="wrapper">
-      {links.map(({ id, name, links, arrow }) => (
-        <div className="footer-links" key={id}>
+      {links.map(({ id, name, links, arrow, styleClass }) => (
+        <div className={`footer-links ${styleClass}`} key={id}>
           {name ? <h4>{name}</h4> : <img src={RiseLogo} alt="rise-logo" className="footer-logo" />}
           <ul>
             {links.map(({ id, name, link }) => (

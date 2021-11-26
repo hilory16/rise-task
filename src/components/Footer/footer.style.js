@@ -36,4 +36,27 @@ export const FooterWrapper = styled.section`
       }
     }
   }
+  ${({ theme }) => theme.mediaQueries.medium} {
+    padding: 20px 20px 50px 20px;
+    flex-wrap: wrap;
+    .footer-links {
+      width: 50%;
+      margin-bottom: 40px;
+    }
+    .footer-links.rise {
+      order: 1;
+    }
+    .footer-links.explore {
+      order: 4;
+    }
+    .footer-links.products {
+      order: 3;
+    }
+    .footer-links.contact {
+      order: 2;
+    }
+    & > * {
+      flex: auto;
+    }
+  }
 `;

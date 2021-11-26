@@ -33,4 +33,49 @@ export const FeatureWrapper = styled.div`
       max-width: 100%;
     }
   }
+  ${({ theme }) => theme.mediaQueries.semiLarge} {
+    .text-content {
+      padding-left: ${({ reverse }) => (!reverse ? '0' : '0px')};
+    }
+    .feature-image {
+      img {
+        height: ${({ reverse }) => (!reverse ? '430px' : '438px')};
+      }
+    }
+  }
+  ${({ theme }) => theme.mediaQueries.medium} {
+    flex-wrap: wrap;
+    flex-direction: column-reverse !important;
+    margin-bottom: 40px;
+    .text-content,
+    .feature-image {
+      width: 100%;
+      padding-left: 0;
+    }
+    .text-content {
+      margin-top: -30px;
+
+      z-index: 1;
+      .title {
+        text-align: center;
+        font-size: 20px;
+      }
+      .description {
+        text-align: center;
+        font-weight: 400;
+        margin-bottom: 20px;
+        max-width: 100%;
+      }
+    }
+    .feature-image {
+      display: flex;
+      justify-content: center;
+      img {
+        height: 268.33px;
+      }
+    }
+    .anchor-link {
+      justify-content: center;
+    }
+  }
 `;
