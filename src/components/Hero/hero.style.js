@@ -8,6 +8,9 @@ export const HeroWrapper = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  ${({ theme }) => theme.mediaQueries.semiLarge} {
+    height: 60vh;
+  }
 `;
 
 export const HeroContent = styled.div`
@@ -67,4 +70,7 @@ export const HeroContent = styled.div`
       width: 240px;
     }
   }
+  ${({ theme }) => theme.mediaQueries.semiLarge} {
+    margin-left: 0;
+  } ;
 `;

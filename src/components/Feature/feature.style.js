@@ -30,6 +30,7 @@ export const FeatureWrapper = styled.div`
     justify-content: ${({ reverse }) => (!reverse ? 'flex-end' : 'flex-start')};
     img {
       height: ${({ reverse }) => (!reverse ? '480px' : '488px')};
+      max-width: 100%;
     }
   }
 `;

@@ -86,6 +86,11 @@ const GlobalStyles = createGlobalStyle`
    .appstores {
       display: flex;
     }
+    ${({ theme }) => theme.mediaQueries.semiLarge}{
+      .wrapper{
+         max-width:991px;
+      }
+    }
 `;
 
 export { GlobalStyles };
